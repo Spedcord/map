@@ -29,7 +29,8 @@ function init() {
         minZoom: TileMapInfo.minZoom,
         bounds: bounds,
         tileSize: TileMapInfo.tileSize,
-        reuseTiles: true
+        reuseTiles: true,
+        attribution: "Spedcord | dariowouters/ts-map"
     }).addTo(map);
     map.zoomControl.setPosition('bottomright');
     map.setMaxBounds(bounds);
