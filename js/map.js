@@ -66,6 +66,28 @@ function init() {
                 city.X,
                 city.Y
             ), 8), split.length == 2 ? split[1] : map.getZoom())
+        } else if (url[i].substring(0, 6) === "helga=") {
+            // Draw a Helga generated line
+            let routeId = url[i].substring(6);
+            get("https://helga.spedcord.xyz/v1/route/"+routeId).then(value => {
+                let coords = value["coordinates"];
+                const nodes = [];
+
+                for (let i = 0; i < coords.length; i++) {
+                    const item = coords[i]
+                    nodes.push(map.unproject(gameCoordinateToImageCoordinate(
+                        item["x"],
+                        item["z"]
+                    ), 8))
+                }
+
+                new L.Polyline(nodes, {
+                    color: 'red',
+                    weight: 4,
+                    opacity: 0.95,
+                    smoothFactor: 1
+                }).addTo(map);
+            })
         }
     }
 }
