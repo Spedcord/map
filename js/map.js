@@ -185,7 +185,7 @@ function addLine(map, lineStr) {
 // Convert game coordinates to map coordinates
 // https://github.com/dariowouters/ts-map/issues/16
 function gameCoordinateToImageCoordinate(xx, yy) {
-    const MAX = Math.pow(2, 8) * TileMapInfo.tileSize; //padding in ts-map 384px
+    const MAX = Math.pow(2, 8) * TileMapInfo.tileSize;
 
     const xTot = TileMapInfo.x2 - TileMapInfo.x1; // Total X length
     const yTot = TileMapInfo.y2 - TileMapInfo.y1; // Total Y length
