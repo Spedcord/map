@@ -38,4 +38,4 @@ Built with [LeafletJS](https://leafletjs.com/)
 
 Some code was copied from https://ets2.online/map/ets2 (:heart:)
 
-`gameCoordinateToImageCoordinate()` by @Koenvh1 
+`gameCoordinateToImageCoordinate()` by [@Koenvh1](https://github.com/Koenvh1)
